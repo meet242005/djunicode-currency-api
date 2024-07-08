@@ -49,7 +49,6 @@ app.post("/convert", async (req, res) => {
 
     res.json({
       convertedAmount,
-      //rate: rates[to],
     });
   } catch (error) {
     console.error(error);

@@ -3,7 +3,7 @@ const axios = require("axios");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(bodyParser.json());
 
@@ -61,6 +61,12 @@ app.get("/convert", async (req, res) => {
   
     return res.status(400).send("Please call this API using POST method");
   
+});
+
+app.get("/", async (req, res) => {
+  
+  return res.status(400).send("Please use the endpoint /convert in POST method");
+
 });
 
 
